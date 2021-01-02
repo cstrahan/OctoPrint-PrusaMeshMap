@@ -135,6 +135,7 @@ Recv:   0.14083  0.13222  0.12750  0.12667  0.12972  0.13667  0.14750
             self.mesh_level_generate()
             return line
         else:
+            self._logger.debug("DID NOT find mesh level line: " + line)
             return line
 
     # ~~ Mesh Bed Level Heatmap Generation
@@ -350,6 +351,9 @@ Recv:   0.14083  0.13222  0.12750  0.12667  0.12972  0.13667  0.14750
             self._logger.info("Heatmap updated")
 
             del self.mesh_level_responses[:]
+        else:
+            self._logger.info("Waiting for more mesh level responses ({0}/{1})".format(len(self.mesh_level_responses), MESH_NUM_POINTS_Y))
+
 
 
 # If you want your plugin to be registered within OctoPrint under a different name than what you defined in setup.py
