@@ -356,6 +356,7 @@ Recv:   0.14083  0.13222  0.12750  0.12667  0.12972  0.13667  0.14750
 # ("OctoPrint-PluginSkeleton"), you may define that here. Same goes for the other metadata derived from setup.py that
 # can be overwritten via __plugin_xyz__ control properties. See the documentation for that.
 __plugin_name__ = "Prusa Mesh Leveling"
+__plugin_pythoncompat__ = ">=2.7,<4"
 
 
 def __plugin_load__():
