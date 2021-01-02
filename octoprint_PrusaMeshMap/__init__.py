@@ -129,7 +129,7 @@ Recv:   0.14083  0.13222  0.12750  0.12667  0.12972  0.13667  0.14750
     # ~~ GCode Received hook
 
     def mesh_level_check(self, comm, line, *args, **kwargs):
-        if re.match(r"^(  -?\d+.\d+)+$", line):
+        if re.match(r"^(  -?\d+.\d+)+\r?$", line):
             self._logger.debug("Found mesh level line")
             self.mesh_level_responses.append(line)
             self.mesh_level_generate()
