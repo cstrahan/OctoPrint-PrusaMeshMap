@@ -13,8 +13,8 @@ $(function() {
         self.settingsViewModel = parameters[1];
         self.controlViewModel = parameters[2];
 
-	// Assign matplotlib color dropdown options
-	self.matplotlib_heatmap_theme_options = ["viridis", "plasma", "inferno", "magma"];
+        // Assign matplotlib color dropdown options
+        self.matplotlib_heatmap_theme_options = ["viridis", "plasma", "inferno", "magma"];
 
         // TODO: Implement your plugin's view model here.
         self.sendPrusaBedLevel = function() {
