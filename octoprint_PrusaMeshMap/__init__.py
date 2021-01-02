@@ -135,7 +135,7 @@ Recv:   0.14083  0.13222  0.12750  0.12667  0.12972  0.13667  0.14750
             self.mesh_level_generate()
             return line
         else:
-            self._logger.debug("DID NOT find mesh level line: " + line)
+            self._logger.debug("DID NOT find mesh level line: " + repr(line))
             return line
 
     # ~~ Mesh Bed Level Heatmap Generation
